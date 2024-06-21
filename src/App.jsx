@@ -25,7 +25,7 @@ const App = () => {
       );
       const result = await resp?.data?.top_news;
 
-      const cat = ["business", "news", "sports", "entertainment"]; //As categories not available in API, manually generated categories
+      const cat = ["all", "business", "technology", "entertainment"]; //As categories not available in API, manually generated categories
 
       const newData = result?.flatMap((altData) =>
         altData.news.map((details) => details)
@@ -36,10 +36,10 @@ const App = () => {
       }
 
       const categorizedData = newData.map((item) => {
-        const rndInt = randomIntFromInterval(0, 3);
+        const rndInt = randomIntFromInterval(1, 3);
         return {
           ...item,
-          category: cat[rndInt ?? 0], // Categories which are created manually , manipulated in data generated from API
+          category: cat[rndInt], // Categories which are created manually , manipulated in data generated from API
         };
       });
       dispatch(addData(categorizedData));

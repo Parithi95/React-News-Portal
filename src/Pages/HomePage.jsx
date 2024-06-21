@@ -8,7 +8,7 @@ import "../index.css";
 const HomePage = ({ itemsPerPage }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const cat = ["all", "business", "news", "sports", "entertainment"];
+  const cat = ["all", "business", "technology", "entertainment"];
 
   const data = useSelector((state) => state.news.newsData); // Data received from API which are stored in redux state management
 
