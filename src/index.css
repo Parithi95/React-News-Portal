@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.paginationContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 5px;
+  border: 1px solid rgb(245, 238, 238);
+  border-radius: 10px;
+}
+.previousButton,
+.nextButton {
+  background-color: rgb(129, 129, 219);
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.previousButton:hover,
+.nextButton:hover {
+  background-color: rgb(83, 95, 234);
+}
+.page,
+.activePage {
+  padding: 5px;
+
+  text-align: center;
+}
+.page:hover {
+  background-color: rgb(234, 178, 178);
+  border-radius: 3px;
+}
+.activePage {
+  background-color: aquamarine;
+  border-radius: 3px;
+}
